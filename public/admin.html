@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin | Soul Mate Connect</title><link rel="stylesheet" href="/styles.css"><script src="/admin.js" defer></script></head>
+<body><header class="site-header"><a class="brand" href="/"><span class="brand-mark">♥</span><span>SOUL MATE <b>CONNECT</b></span></a><a class="nav-cta" href="/">View public website ↗</a></header>
+<main class="admin-wrap"><p class="eyebrow">PRIVATE MANAGEMENT AREA</p><h1 style="font:42px 'Playfair Display',serif">Administrator <em style="color:#c9a653">dashboard</em></h1>
+<section id="login-panel" class="admin-panel"><h2>Admin login</h2><form id="login-form" class="admin-form"><label>Username<input name="username" required autocomplete="username"></label><label>Password<input name="password" type="password" required autocomplete="current-password"></label><button class="gold-button full">Log in</button></form><p id="login-message" class="notice"></p></section>
+<section id="dashboard" class="hidden">
+<div class="admin-panel"><div style="display:flex;justify-content:space-between;gap:15px;align-items:center"><h2>Add a profile</h2><button id="logout" class="clear-button">Log out</button></div>
+<p class="notice">Only add profiles for adults who have explicitly agreed to have these details and photos published. New profiles remain hidden until approved.</p>
+<form id="profile-form" class="admin-form">
+<label>Display name<input name="display_name" required maxlength="100"></label><label>Age (18+)<input name="age" type="number" min="18" max="100" required></label>
+<label>County<input name="county" required maxlength="100"></label><label>Occupation<input name="occupation" required maxlength="120"></label>
+<label>Relationship preference<select name="relationship_preference" required><option value="">Choose one</option><option>Long-term relationship</option><option>Marriage</option><option>Friendship first</option><option>Open to possibilities</option></select></label>
+<label>Photo URL<input name="image_url" type="url" placeholder="https://…"></label>
+<label class="full">Short bio<textarea name="bio" rows="3" required maxlength="1500"></textarea></label><label class="full">Interests<input name="interests" maxlength="255"></label>
+<label class="full" style="display:flex;align-items:center;gap:9px"><input name="consent_confirmed" type="checkbox" required style="width:auto"> I confirm documented consent to publish this adult's profile and photograph.</label>
+<label style="display:flex;align-items:center;gap:9px"><input name="is_available" type="checkbox" checked style="width:auto"> Available</label>
+<label style="display:flex;align-items:center;gap:9px"><input name="is_approved" type="checkbox" style="width:auto"> Approve and publish now</label>
+<button class="gold-button full">Save profile</button></form><p id="profile-message" class="notice"></p></div>
+<div class="admin-panel"><h2>Manage profiles</h2><div style="overflow-x:auto"><table class="admin-table"><thead><tr><th>Name</th><th>Age</th><th>County</th><th>Status</th><th>Actions</th></tr></thead><tbody id="profile-rows"></tbody></table></div></div>
+</section></main></body></html>

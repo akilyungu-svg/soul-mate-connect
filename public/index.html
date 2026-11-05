@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover meaningful connections with Soul Mate Connect.">
+  <title>Soul Mate Connect | Where Hearts Find Their Match</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><span class="brand-mark">♥</span><span>SOUL MATE <b>CONNECT</b></span></a>
+    <nav><a href="#profiles">Explore profiles</a><a href="#how-it-works">How it works</a><a href="#about">About</a></nav>
+    <a class="nav-cta" href="#profiles">Find a connection <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> A MORE PERSONAL WAY TO CONNECT</p>
+        <h1>Where hearts<br>find their <em>match.</em></h1>
+        <p class="hero-text">Thoughtful introductions. Genuine people. Meaningful possibilities. Discover member profiles and let our matchmaker help you take the next step.</p>
+        <a class="gold-button" href="#profiles">Explore profiles <span>→</span></a>
+        <p class="hero-note">A free-to-browse matchmaking directory · Adults 18+</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Elegant gold abstract heart artwork">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-heart">♥</div><div class="hero-art-caption">CONNECTION<br>BEGINS HERE</div>
+      </div>
+    </section>
+
+    <section class="trust-strip"><span>✦ CONSENT-BASED PROFILES</span><span>✦ PERSONAL MATCHMAKER</span><span>✦ FREE TO BROWSE</span></section>
+
+    <section class="profiles-section" id="profiles">
+      <div class="section-heading">
+        <div><p class="eyebrow">GET TO KNOW OUR MEMBERS</p><h2>Discover <em>profiles</em></h2></div>
+        <p>Browse available profiles and find someone whose story interests you.</p>
+      </div>
+      <form id="filters" class="filters">
+        <label>Minimum age<input type="number" name="minAge" min="18" max="100" placeholder="18"></label>
+        <label>Maximum age<input type="number" name="maxAge" min="18" max="100" placeholder="Any"></label>
+        <label>County<select name="county"><option value="">All counties</option></select></label>
+        <label>Occupation<select name="occupation"><option value="">All occupations</option></select></label>
+        <label>Relationship preference<select name="relationship_preference"><option value="">All preferences</option></select></label>
+        <button class="gold-button filter-button" type="submit">Apply filters</button>
+        <button class="clear-button" type="reset">Clear</button>
+      </form>
+      <p id="result-count" class="result-count" aria-live="polite">Loading profiles…</p>
+      <div id="profile-grid" class="profile-grid"><div class="empty-state">Loading available profiles…</div></div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <p class="eyebrow">SIMPLE, PERSONAL, THOUGHTFUL</p><h2>How it <em>works</em></h2>
+      <div class="steps">
+        <article><span>01</span><h3>Explore</h3><p>Browse profiles and use filters to narrow your search.</p></article>
+        <article><span>02</span><h3>Choose</h3><p>Open a profile to learn more about the person.</p></article>
+        <article><span>03</span><h3>Connect</h3><p>Contact our matchmaker on WhatsApp to request an introduction.</p></article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about"><div><p class="eyebrow">ABOUT SOUL MATE CONNECT</p><h2>Real people.<br><em>Considered connections.</em></h2></div><p>We help adults explore potential connections through a personal matchmaking service. Browsing is free. An introduction is coordinated by our matchmaker, with the agreement of the people involved.</p></section>
+  </main>
+
+  <footer><a class="brand" href="/"><span class="brand-mark">♥</span><span>SOUL MATE <b>CONNECT</b></span></a><p>For adults aged 18 and over. Profiles are published with the member’s permission.</p><a href="/admin.html">Administrator</a><small>© <span id="year"></span> Soul Mate Connect</small></footer>
+
+  <dialog id="profile-dialog" class="profile-dialog"><button class="dialog-close" aria-label="Close">×</button><div id="dialog-content"></div></dialog>
+</body>
+</html>
